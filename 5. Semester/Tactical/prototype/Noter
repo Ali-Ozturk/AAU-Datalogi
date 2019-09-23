@@ -1,0 +1,42 @@
+Remember's:
+    Need to find a better way to transition between showing smokes of a specific map or strategies.
+    Consider adding sections on pages for the user to easier transition between sections. (Ex. De_mirage > Smokes > A split)
+
+DONE:
+    Add background-color fade animation to buttons
+    Map cards: The padding is little bit weird on the text.
+
+
+TODO's:
+    Generalize buttons, similar labels, headers etc.
+      + Beautify the .css styling.
+    Make auto-resize images on all cards. So that it's possible to add any size picture.
+    Add functionality to the contact form.
+    Create header, footer and meta files for ../web/
+        Header should also be able to change background and style depending on the page shown on.
+        - Maybe just make two separate headers?
+    Add better animation and styling to play buttons on smokes/strategy page.
+    Create a copy able or auto-select for the coordinates on smokes page.
+    Animation effect to logo on header.
+    Groupings like (Jumpthrow, crouching, etc.) Should be button-like with border and bg-color.
+    Add a loading bar when accessing any new page.
+    Add functionality to sorting and listing. (Requires databases in future work)
+    Change "Unique smokes" to "Smokes" in map cards. More accurate-
+    Add "setpos" command under gif inside the modal overlay.
+    Create a default image for map cards that does not have an img in their database.
+    Create a more dynamic modal. (Currently have coordinates even when its showing strats)
+
+
+
+
+Bugs:
+    + Fix the window going to top when clicking the play video button.
+    + Padding or the margin of <h1> headers seem to have been reset? No longer 0.
+
+
+Future work:
+    + Create the databases for the website
+    + Make everything database dependent.
+    + Create an admin control panel.
+    + Maybe change "Tactics" to be "Strategies". It's more accurate.
+
