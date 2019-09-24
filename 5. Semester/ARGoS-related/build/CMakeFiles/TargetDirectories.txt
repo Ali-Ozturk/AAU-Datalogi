@@ -1,0 +1,8 @@
+/mnt/c/Users/Ali/documents/aau-datalogi/5. Semester/ARGoS-related/build/CMakeFiles/rebuild_cache.dir
+/mnt/c/Users/Ali/documents/aau-datalogi/5. Semester/ARGoS-related/build/CMakeFiles/edit_cache.dir
+/mnt/c/Users/Ali/documents/aau-datalogi/5. Semester/ARGoS-related/build/controllers/CMakeFiles/rebuild_cache.dir
+/mnt/c/Users/Ali/documents/aau-datalogi/5. Semester/ARGoS-related/build/controllers/CMakeFiles/edit_cache.dir
+/mnt/c/Users/Ali/documents/aau-datalogi/5. Semester/ARGoS-related/build/controllers/footbot_diffusion/CMakeFiles/rebuild_cache.dir
+/mnt/c/Users/Ali/documents/aau-datalogi/5. Semester/ARGoS-related/build/controllers/footbot_diffusion/CMakeFiles/footbot_diffusion.dir
+/mnt/c/Users/Ali/documents/aau-datalogi/5. Semester/ARGoS-related/build/controllers/footbot_diffusion/CMakeFiles/edit_cache.dir
+/mnt/c/Users/Ali/documents/aau-datalogi/5. Semester/ARGoS-related/build/controllers/footbot_diffusion/CMakeFiles/footbot_diffusion_autogen.dir
