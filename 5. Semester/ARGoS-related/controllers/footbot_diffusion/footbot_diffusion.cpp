@@ -4,6 +4,8 @@
 #include <argos3/core/utility/configuration/argos_configuration.h>
 /* 2D vector definition */
 #include <argos3/core/utility/math/vector2.h>
+/* Enable logging */
+#include <argos3/core/utility/logging/argos_log.h>
 
 /****************************************/
 /****************************************/
@@ -45,6 +47,7 @@ void CFootBotDiffusion::Init(TConfigurationNode& t_node) {
     */
    m_pcWheels    = GetActuator<CCI_DifferentialSteeringActuator>("differential_steering");
    m_pcProximity = GetSensor  <CCI_FootBotProximitySensor      >("footbot_proximity"    );
+   m_pcPosSens = GetSensor <CCI_PositioningSensor>("positioning");
    /*
     * Parse the configuration file
     *
@@ -64,6 +67,11 @@ void CFootBotDiffusion::Init(TConfigurationNode& t_node) {
 void CFootBotDiffusion::ControlStep() {
    /* Get readings from proximity sensor */
    const CCI_FootBotProximitySensor::TReadings& tProxReads = m_pcProximity->GetReadings();
+
+      // argos::LOG << "[x = " << (int)m_pcPosSens->GetReading().Position.GetX() << "] [y = " << (int)m_pcPosSens->GetReading().Position.GetY() << "]" << std::endl;
+   CVector2 hello = CVector2(2,2);
+   argos::LOG << m_pcPosSens->GetReading().Position << std::endl;
+
    /* Sum them together */
    CVector2 cAccumulator;
    for(size_t i = 0; i < tProxReads.size(); ++i) {
@@ -77,16 +85,10 @@ void CFootBotDiffusion::ControlStep() {
    if(m_cGoStraightAngleRange.WithinMinBoundIncludedMaxBoundIncluded(cAngle) &&
       cAccumulator.Length() < m_fDelta ) {
       /* Go straight */
-      m_pcWheels->SetLinearVelocity(m_fWheelVelocity, m_fWheelVelocity);
+      m_pcWheels->SetLinearVelocity(-m_fWheelVelocity, -m_fWheelVelocity);
    }
    else {
-      /* Turn, depending on the sign of the angle */
-      if(cAngle.GetValue() > 0.0f) {
-         m_pcWheels->SetLinearVelocity(m_fWheelVelocity, 0.0f);
-      }
-      else {
-         m_pcWheels->SetLinearVelocity(0.0f, m_fWheelVelocity);
-      }
+         m_pcWheels->SetLinearVelocity(-m_fWheelVelocity, m_fWheelVelocity);
    }
 }
 
