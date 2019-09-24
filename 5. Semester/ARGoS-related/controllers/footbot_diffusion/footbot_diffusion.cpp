@@ -4,25 +4,29 @@
 #include <argos3/core/utility/configuration/argos_configuration.h>
 /* 2D vector definition */
 #include <argos3/core/utility/math/vector2.h>
+/* 3D vector definition */
+#include <argos3/core/utility/math/vector3.h>
+/* Quick maths */
+#include <math.h> 
 /* Enable logging */
 #include <argos3/core/utility/logging/argos_log.h>
 
 /****************************************/
 /****************************************/
 
-CFootBotDiffusion::CFootBotDiffusion() :
-   m_pcWheels(NULL),
-   m_pcProximity(NULL),
-   m_cAlpha(10.0f),
-   m_fDelta(0.5f),
-   m_fWheelVelocity(2.5f),
-   m_cGoStraightAngleRange(-ToRadians(m_cAlpha),
-                           ToRadians(m_cAlpha)) {}
+CFootBotDiffusion::CFootBotDiffusion() : m_pcWheels(NULL),
+                                         m_pcProximity(NULL),
+                                         m_cAlpha(10.0f),
+                                         m_fDelta(0.5f),
+                                         m_fWheelVelocity(2.5f),
+                                         m_cGoStraightAngleRange(-ToRadians(m_cAlpha),
+                                                                 ToRadians(m_cAlpha)) {}
 
 /****************************************/
 /****************************************/
 
-void CFootBotDiffusion::Init(TConfigurationNode& t_node) {
+void CFootBotDiffusion::Init(TConfigurationNode &t_node)
+{
    /*
     * Get sensor/actuator handles
     *
@@ -45,9 +49,9 @@ void CFootBotDiffusion::Init(TConfigurationNode& t_node) {
     * list a device in the XML and then you request it here, an error
     * occurs.
     */
-   m_pcWheels    = GetActuator<CCI_DifferentialSteeringActuator>("differential_steering");
-   m_pcProximity = GetSensor  <CCI_FootBotProximitySensor      >("footbot_proximity"    );
-   m_pcPosSens = GetSensor <CCI_PositioningSensor>("positioning");
+   m_pcWheels = GetActuator<CCI_DifferentialSteeringActuator>("differential_steering");
+   m_pcProximity = GetSensor<CCI_FootBotProximitySensor>("footbot_proximity");
+   m_pcPosSens = GetSensor<CCI_PositioningSensor>("positioning");
    /*
     * Parse the configuration file
     *
@@ -64,31 +68,44 @@ void CFootBotDiffusion::Init(TConfigurationNode& t_node) {
 /****************************************/
 /****************************************/
 
-void CFootBotDiffusion::ControlStep() {
+void CFootBotDiffusion::ControlStep()
+{
    /* Get readings from proximity sensor */
-   const CCI_FootBotProximitySensor::TReadings& tProxReads = m_pcProximity->GetReadings();
+   const CCI_FootBotProximitySensor::TReadings &tProxReads = m_pcProximity->GetReadings();
 
-      // argos::LOG << "[x = " << (int)m_pcPosSens->GetReading().Position.GetX() << "] [y = " << (int)m_pcPosSens->GetReading().Position.GetY() << "]" << std::endl;
-   CVector2 hello = CVector2(2,2);
+   // argos::LOG << "[x = " << (int)m_pcPosSens->GetReading().Position.GetX() << "] [y = " << (int)m_pcPosSens->GetReading().Position.GetY() << "]" << std::endl;
    argos::LOG << m_pcPosSens->GetReading().Position << std::endl;
 
-   /* Sum them together */
-   CVector2 cAccumulator;
-   for(size_t i = 0; i < tProxReads.size(); ++i) {
-      cAccumulator += CVector2(tProxReads[i].Value, tProxReads[i].Angle);
-   }
-   cAccumulator /= tProxReads.size();
    /* If the angle of the vector is small enough and the closest obstacle
-    * is far enough, continue going straight, otherwise curve a little
-    */
-   CRadians cAngle = cAccumulator.Angle();
-   if(m_cGoStraightAngleRange.WithinMinBoundIncludedMaxBoundIncluded(cAngle) &&
-      cAccumulator.Length() < m_fDelta ) {
-      /* Go straight */
-      m_pcWheels->SetLinearVelocity(-m_fWheelVelocity, -m_fWheelVelocity);
+     * is far enough, continue going straight, else pick a random direction */
+   CRadians cZAngle, cYAngle, cXAngle;
+
+   m_pcWheels->SetLinearVelocity(m_fWheelVelocity, -m_fWheelVelocity);
+   m_pcPosSens->GetReading().Orientation.ToEulerAngles(cZAngle, cYAngle, cXAngle);
+
+   targetDirection = CVector2(-2, -2);
+
+   int frontAngle = ToDegrees(cZAngle).GetValue();
+   int targetAngle = targetDirection.Angle().GetValue() * 57.2958;
+
+   //argos::LOG << "Front = " << frontAngle << std::endl;
+   //argos::LOG << "Target = " << targetAngle << std::endl;
+
+   //CVector2 frontVector = CVector2(m_pcPosSens->GetReading().Orientation.GetX(), m_pcPosSens->GetReading().Orientation.GetY());
+
+   //argos::LOG << "\nFrontvector = " << frontVector << "\n" << std::endl;
+
+   if (((targetAngle - frontAngle) > -2) && ((targetAngle - frontAngle) < 2))
+   {
+      m_pcWheels->SetLinearVelocity(m_fWheelVelocity, m_fWheelVelocity);
    }
-   else {
-         m_pcWheels->SetLinearVelocity(-m_fWheelVelocity, m_fWheelVelocity);
+
+   float xDif = targetDirection.GetX() - m_pcPosSens->GetReading().Position.GetX();
+   float yDif = targetDirection.GetY() - m_pcPosSens->GetReading().Position.GetY();
+
+   if ( abs(sqrt(pow(xDif, 2) + pow(yDif,2))) < 0.02 )
+   {
+      m_pcWheels->SetLinearVelocity(m_fWheelVelocity, -m_fWheelVelocity);
    }
 }
 

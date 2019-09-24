@@ -114,6 +114,10 @@ private:
     * It is set to [-alpha,alpha]. */
    CRange<CRadians> m_cGoStraightAngleRange;
 
+   bool isAdjustingDirection;
+   CVector2 targetDirection;
+
+
 };
 
 #endif
