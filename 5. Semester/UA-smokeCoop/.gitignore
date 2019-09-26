@@ -1,0 +1,5 @@
+# Gitignore for ARGoS Project
+# Ali-ozturk
+
+# Ignore the build folder and all files in within
+/.idea/*

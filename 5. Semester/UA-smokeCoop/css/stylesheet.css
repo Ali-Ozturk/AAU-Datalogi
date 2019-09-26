@@ -1,0 +1,28 @@
+body {
+  text-align:center;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+.card {
+  width: 12.5%;
+  float:left;
+  border: 1px black solid;
+  margin: 5px;
+}
+
+.card img {
+  height: 150px;
+  width: 100%;
+}
+
+.container {
+  padding: 2px 16px;
+}
+
+.container p, h4 {
+  margin: 8px;
+}
