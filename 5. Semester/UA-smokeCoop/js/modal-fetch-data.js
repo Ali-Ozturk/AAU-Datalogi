@@ -9,7 +9,7 @@ $(document).ready(function() {
             data: 'id='+uid,
             dataType: "html",   //expect html to be returned
             success: function(response){
-                $("#testingContainer").html(response);
+                $(".modal-content").html(response);
                 //alert(response);
             }
 
