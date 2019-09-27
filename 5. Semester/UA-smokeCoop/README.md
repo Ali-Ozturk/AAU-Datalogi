@@ -4,6 +4,20 @@ This is a basic website built with PHP + SQL in order to train utilities in CS:G
 
 
 
+## Todo's
+
+- [ ] Design and layout of the webpage
+- [ ] More information on the cards (Creator, utility type)
+- [ ] Layout of the modal 
+- [ ] Login + Register system and allow others to add utilities
+- [ ] Searching and sorting options 
+- [ ] Use .mp4 and proper encoding
+  - [ ] Add a nice video player (Pause, Play, Back and forth)
+- [ ] Add setpos in database and on utility
+- [ ] Create initial idea or layout of the Practice part
+
+
+
 ## Brainstorm
 
 ### Website structure / design
