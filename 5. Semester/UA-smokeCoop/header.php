@@ -9,6 +9,9 @@
     <meta name="author" content="SitePoint">
 
     <link rel="stylesheet" href="css/stylesheet.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+    <script src="js/modal-fetch-data.js" type="text/javascript"></script>
 </head>
 
 <body>
