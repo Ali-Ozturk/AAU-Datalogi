@@ -6,10 +6,12 @@ This is a basic website built with PHP + SQL in order to train utilities in CS:G
 
 ## Todo's
 
+- [ ] Create the actual frontpage (Choose map)
+  - [ ] Add a source to maps database (Link to image)
 - [ ] Design and layout of the webpage
 - [ ] More information on the cards (Creator, utility type)
 - [ ] Layout of the modal 
-- [ ] Login + Register system and allow others to add utilities
+- [ ] Login + Register system and allow users to add utilities
 - [ ] Searching and sorting options 
 - [ ] Use .mp4 and proper encoding
   - [ ] Add a nice video player (Pause, Play, Back and forth)

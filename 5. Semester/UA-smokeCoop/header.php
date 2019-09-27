@@ -4,13 +4,18 @@
 <head>
     <meta charset="utf-8">
 
-    <title>Smokes UngAalborg</title>
-    <meta name="description" content="The HTML5 Herald">
-    <meta name="author" content="SitePoint">
+    <title>CS:GO Utilities database</title>
+    <meta name="description" content="To be determined">
+    <meta name="author" content="Ali Ozturk">
 
-    <link rel="stylesheet" href="css/stylesheet.css">
+    <!-- External libraries -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 
+    <!-- Local libraries -->
+    <link rel="stylesheet" href="css/stylesheet.css">
+
+    <!-- Scripts -->
+    <script src="js/modal-fetch-data.js" type="text/javascript"></script>
 </head>
 
 <body>

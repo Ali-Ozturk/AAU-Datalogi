@@ -5,7 +5,7 @@ $(document).ready(function() {
         console.log(uid);
         $.ajax({    //create an ajax request to display.php
             type: "GET",
-            url: "testing.php",
+            url: "modal-data.php",
             data: 'id='+uid,
             dataType: "html",   //expect html to be returned
             success: function(response){

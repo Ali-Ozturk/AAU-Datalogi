@@ -8,7 +8,7 @@ $utilityList = mysqli_fetch_all($makeQuery, MYSQLI_ASSOC);
 
 
 foreach ($utilityList as $row):
-    print_r($row);
+    echo '<img src="gifs/' . $row['source'] . '">';
 endforeach;
 
 ?>
