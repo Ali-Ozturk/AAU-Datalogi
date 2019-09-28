@@ -1,5 +1,12 @@
+<?php
+$map_id = $_GET['map_id'];
+$map_sql = "SELECT name FROM maps WHERE id=$map_id";
+$map_result = mysqli_fetch_assoc(mysqli_query($db, $map_sql));
+$map_name = $map_result['name'];
+?>
+
 <div id="header">
-    <h1>de_inferno</h1>
+    <h1><?php print_r($map_name); ?></h1>
 </div>
 
 <div id="content">

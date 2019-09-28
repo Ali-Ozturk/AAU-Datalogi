@@ -1,5 +1,7 @@
+
 body {
   text-align:center;
+  background: url(../images/bg-concrete.png) repeat;
 }
 
 a {
@@ -95,3 +97,50 @@ a {
 }
 
 .modal-body {padding: 2px 16px;}
+
+
+/* Frontpage */
+#frontpage {
+  width: 100%;
+  height: 800px;
+}
+
+#frontpage .wrapper {
+  width: 80%;
+  height: 100%;
+  display:inline-block;
+}
+
+#frontpage .logo {
+  width:100%;
+  display:inline-block;
+  padding-top: 25px;
+}
+#frontpage .logo img {
+  max-width: 18%;
+  height: auto;
+}
+
+#frontpage .maps {
+  margin-top:50px;
+  display: inline-block;
+  width: 80%;
+}
+
+#frontpage .maps .maps-text {
+  margin-bottom: 30px;
+}
+
+#frontpage .maps img {
+  max-width: 18%;
+  margin: 0.2%;
+  border: darkgray 1px solid;
+  -webkit-filter: grayscale(1);
+  filter: grayscale(1);
+  transition: filter .2s ease-in-out;
+}
+
+#frontpage .maps img:hover {
+  -webkit-filter: grayscale(0);
+  filter: grayscale(0);
+}

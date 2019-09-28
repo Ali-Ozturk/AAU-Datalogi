@@ -1,5 +1,5 @@
 <?php
-$utilitySQL = "SELECT * FROM utilities ORDER BY id";
+$utilitySQL = "SELECT * FROM `utilities` WHERE map_id=$map_id ORDER BY id";
 $makeQuery = mysqli_query($db, $utilitySQL);
 $utilityList = mysqli_fetch_all($makeQuery, MYSQLI_ASSOC);
 

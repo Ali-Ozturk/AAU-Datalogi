@@ -11,4 +11,5 @@ foreach ($utilityList as $row):
     echo '<img src="gifs/' . $row['source'] . '">';
 endforeach;
 
+mysqli_close($db);
 ?>

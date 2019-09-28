@@ -6,8 +6,8 @@ This is a basic website built with PHP + SQL in order to train utilities in CS:G
 
 ## Todo's
 
-- [ ] Create the actual frontpage (Choose map)
-  - [ ] Add a source to maps database (Link to image)
+- [x] Create the actual frontpage (Choose map)
+  - [x] Add a source to maps database (Link to image)
 - [ ] Design and layout of the webpage
 - [ ] More information on the cards (Creator, utility type)
 - [ ] Layout of the modal 

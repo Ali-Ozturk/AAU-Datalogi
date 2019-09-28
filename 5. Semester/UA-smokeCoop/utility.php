@@ -2,7 +2,7 @@
 
 <?php include('header.php'); ?>
 
-<?php include('frontpage.php'); ?>
+<?php include('utility-content.php'); ?>
 
 <?php include('footer.php');
 
