@@ -2,7 +2,6 @@ $(document).ready(function() {
 
     $(".card").click(function() {
         var uid = this.id;
-        console.log(uid);
         $.ajax({    //create an ajax request to display.php
             type: "GET",
             url: "modal-data.php",

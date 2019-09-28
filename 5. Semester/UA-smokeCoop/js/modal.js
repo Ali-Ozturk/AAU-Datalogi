@@ -2,14 +2,14 @@
 var modal = document.getElementById("myModal");
 
 // Get the button that opens the modal
-var btn = document.getElementsByClassName("myBtn");
+var card = document.getElementsByClassName("myCard");
 
 // Get the <span> element that closes the modal
 var span = document.getElementsByClassName("close")[0];
 
 // When the user clicks the button, open the modal
-for (var i = 0; i < btn.length; i++){
-    btn[i].addEventListener("click", function () {
+for (var i = 0; i < card.length; i++){
+    card[i].addEventListener("click", function () {
         modal.style.display = "block";
     })
 }
