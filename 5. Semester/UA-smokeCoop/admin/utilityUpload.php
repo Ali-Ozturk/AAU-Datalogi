@@ -9,11 +9,11 @@ $smoke_exec = $_POST['uti-exec'];
 $smoke_creator = $_POST['uti-creator'];
 
 $currentDir = dirname(getcwd(), 1);
-$uploadDirectory = "/gifs/";
+$uploadDirectory = "/media/";
 
 $errors = []; // Store all foreseen and unforseen errors here
 
-$fileExtensions = ['jpeg', 'gif', 'jpg', 'png']; // Get all the file extensions
+$fileExtensions = ['mp4']; // Get all the file extensions
 
 $fileName = $_FILES['myfile']['name'];
 $fileTmpName = $_FILES['myfile']['tmp_name'];

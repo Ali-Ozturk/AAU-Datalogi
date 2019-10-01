@@ -35,7 +35,7 @@
         <option value="1">Ali 'rec0il' Øztürk</option>
     </select>
 
-    Upload the gif:
+    Upload the media:
     <input type="file" name="myfile" id="fileToUpload">
     <input type="submit" name="submit" value="Upload utility now" >
 </form>

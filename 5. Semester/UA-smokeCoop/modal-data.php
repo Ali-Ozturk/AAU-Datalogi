@@ -8,7 +8,12 @@ $utilityList = mysqli_fetch_all($makeQuery, MYSQLI_ASSOC);
 
 
 foreach ($utilityList as $row):
-    echo '<img src="gifs/' . $row['source'] . '">';
+    printf('        
+        <video autoplay controls>
+            <source src="media/%s" type="video/mp4">
+            Your browser does not support videos. 
+        </video>
+        ', $row['source']);
 endforeach;
 
 mysqli_close($db);
