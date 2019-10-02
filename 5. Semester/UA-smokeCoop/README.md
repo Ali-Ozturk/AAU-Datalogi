@@ -13,12 +13,12 @@ This is a basic website built with PHP + SQL in order to train utilities in CS:G
 - [ ] Login + Register system and allow users to add utilities
 - [ ] Searching and sorting options 
 - [ ] Use .mp4 and proper encoding (ffmpeg)
-  - [ ] (Modal) Add a video player (Pause, Play, Back and forth) 
-  - [ ] (Modal) Autoplay the video when clicked on a card.
+  - [x] (Modal) Add a video player (Pause, Play, Back and forth) 
+  - [x] (Modal) Autoplay the video when clicked on a card.
   - [ ] (Card) Auto generate a thumbnail from the .mp4
-  - [ ] (Admin-panel) Uploading of .gifs should not be allowed anymore
-  - [ ] (Overall) Fix folder name: gifs -> videos
-  - [ ] (Overall) Refractor code where a gif is used to use .mp4 instead.
+  - [x] (Admin-panel) Uploading of .gifs should not be allowed anymore
+  - [x] (Overall) Fix folder name: gifs -> videos
+  - [x] (Overall) Refractor code where a gif is used to use .mp4 instead.
 - [x] Add setpos in utility database
 - [ ] Create initial idea or layout of the Practice part
 
