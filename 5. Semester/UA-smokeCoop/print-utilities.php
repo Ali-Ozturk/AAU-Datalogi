@@ -12,7 +12,7 @@ foreach ($utilityList as $utility) {
 
     printf('<div class="card myCard" id="%s">
     <div class="c-image">
-        <video>
+        <video preload="0.1">
             <source src="media/%s" type="video/mp4">
             Your browser does not support videos. 
         </video>

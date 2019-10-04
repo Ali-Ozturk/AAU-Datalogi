@@ -9,9 +9,17 @@ This is a basic website built with PHP + SQL in order to train utilities in CS:G
 - [x] Create the actual frontpage (Choose map)
   - [x] Add a source to maps database (Link to image)
 - [x] More information on the cards (Creator, utility type)
+- [ ] Colourize tags on cards
+- [ ] Default sorting of printing all utilities
 - [ ] Layout of the modal 
 - [ ] Login + Register system and allow users to add utilities
 - [ ] Searching and sorting options 
+  - [ ] Quick search (Query a selection of tables)
+    - [ ] Advanced search (Sorting pretty much)
+  - [ ] Search by; type, creator, title, 
+  - [ ] Sort by; type, creator, date, map area, 
+  - [ ] Create layout / design
+  - [ ] Decide language to use (Javascript or jQuery)
 - [ ] Use .mp4 and proper encoding (ffmpeg)
   - [x] (Modal) Add a video player (Pause, Play, Back and forth) 
   - [x] (Modal) Autoplay the video when clicked on a card.
