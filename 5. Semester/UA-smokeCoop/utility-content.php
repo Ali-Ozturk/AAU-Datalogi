@@ -26,6 +26,15 @@ $map_name = $map_result['name'];
                         <h2>Utility</h2>
                     </div>
                     <div class="modal-body">
+                        <div class="modal-body-left">
+                            <!-- TODO: Add content to left side of modal here (getPos etc.) -->
+
+                            <h2>Testing</h2>
+                        </div>
+
+                        <div class="modal-body-right">
+
+                        </div>
                         <!-- Modal content (modal-data.php) -->
                     </div>
                 </div>
