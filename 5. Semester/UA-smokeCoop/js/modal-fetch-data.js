@@ -8,7 +8,7 @@ $(document).ready(function() {
             data: 'id='+uid,
             dataType: "html",   //expect html to be returned
             success: function(response){
-                $(".modal-body-right").html(response);
+                $(".modal-body").html(response);
                 //alert(response);
             }
 
