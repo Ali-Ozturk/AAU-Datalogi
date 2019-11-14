@@ -28,7 +28,7 @@
     <div class="wrapper">
 
         <div class="logo">
-            <a href="index" style="text-decoration: none; color: white;">
+            <a href="index.php" style="text-decoration: none; color: white;">
                 <img src="images/logo2.png">
                 <p>SMOKEHUB</p>
             </a>
@@ -83,7 +83,7 @@
                              style="background: url(\'images/%s\'") center;background-size: cover;"></div>
 
                         <div class="image_overlay"></div>
-                        <a href="map?name=de_mirage">
+                        <a href="utility.php?map_id=%d">
                             <div id="view_details">View more</div>
                         </a>
 
@@ -101,9 +101,7 @@
                     </div>
                 </div>
 
-            </div>', $map_source, $map_name, $map_origin, $map_total);
-
-                debug_to_console($map_total);
+            </div>', $map_source, $map_id, $map_name, $map_origin, $map_total);
             }
             ?>
 
