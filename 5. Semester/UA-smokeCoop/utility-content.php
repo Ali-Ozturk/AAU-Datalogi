@@ -29,7 +29,23 @@ $map_name = $map_result['name'];
                         <div class="modal-body-left">
                             <!-- TODO: Add content to left side of modal here (getPos etc.) -->
 
-                            <h2>Testing</h2>
+                            <h1>Name of smoke</h1>
+                            <span>map_name</span>
+
+                            <h2>Smoke technique</h2>
+                            <span class="tag jumpthrow">Jumpthrow</span>
+                            <span class="tag crouched">Crouched</span>
+
+                            <h2>Teleport coordinates</h2>
+                            <input id="setposInput" onclick="copyClipboard()" readonly
+                                   type="text" value="setpos 1239128312, 123123123812, 38523821">
+                            <button onclick="copyClipboard()"><i class="fa fa-copy"></i></button>
+
+                            <h2>Creator comment</h2>
+                            <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas nisl nisi, vestibulum nec turpis vitae, congue facilisis eros. Curabitur vel lectus lobortis, molestie erat non, viverra sapien. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Curabitur imperdiet consectetur tellus in elementum. Maecenas nec nibh nec tellus gravida ultricies. Curabitur tincidunt mauris ac vestibulum varius.</span>
+
+
+
                         </div>
 
                         <div class="modal-body-right">
@@ -43,6 +59,7 @@ $map_name = $map_result['name'];
 
             <!-- Script that requires to be loaded later -->
             <script src="js/modal.js" type="text/javascript"></script>
+            <script src="js/copyClipboard.js" type="text/javascript"></script>
         </div>
     </div>
 </div>

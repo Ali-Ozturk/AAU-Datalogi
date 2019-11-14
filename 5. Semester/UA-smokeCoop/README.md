@@ -9,10 +9,14 @@ This is a basic website built with PHP + SQL in order to train utilities in CS:G
 - [x] Create the actual frontpage (Choose map)
   - [x] Add a source to maps database (Link to image)
 - [x] More information on the cards (Creator, utility type)
-- [ ] Colourize tags on cards
+- [x] Colourize tags on cards
+- [ ] Make utility cards to flexbox
+- [ ] Implement front-end design (Tactical)
 - [ ] Default sorting of printing all utilities
-- [ ] Layout of the modal 
+- [x] Layout of the modal 
+  - [x] Flex box left + right
 - [ ] Login + Register system and allow users to add utilities
+- [ ] Consider not auto playing on click
 - [ ] Searching and sorting options 
   - [ ] Quick search (Query a selection of tables)
     - [ ] Advanced search (Sorting pretty much)
@@ -27,7 +31,8 @@ This is a basic website built with PHP + SQL in order to train utilities in CS:G
   - [x] (Admin-panel) Uploading of .gifs should not be allowed anymore
   - [x] (Overall) Fix folder name: gifs -> videos
   - [x] (Overall) Refractor code where a gif is used to use .mp4 instead.
-- [x] Add setpos in utility database
+- [ ] Add colouns to utility table in database
+  - [ ] Creator comments, utility tags, setpos
 - [ ] Create initial idea or layout of the Practice part
 
 
