@@ -12,7 +12,7 @@ foreach ($utilityList as $row):
                             <!-- TODO: Add content to left side of modal here (getPos etc.) -->
 
                             <h1>%s</h1>
-                            <span>Created %s</span>
+                            <span>Submitted %s</span>
 
                             <h2>Smoke technique</h2>
                             <span class="tag %s">%s</span>

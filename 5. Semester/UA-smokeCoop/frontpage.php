@@ -4,10 +4,16 @@
     <div class="wrapper">
 
         <div class="logo">
-            <a href="index.php" style="text-decoration: none; color: white;">
-                <img src="images/logo2.png">
-                <p>SMOKEHUB</p>
-            </a>
+            <div class="thislogo">
+                <a href="index.php" style="text-decoration: none; color: white;">
+                    <img src="images/logo2.png">
+                    <p>SMOKEHUB</p>
+                </a>
+            </div>
+
+            <div class="login">
+                <a href="#">Login</a> <span> | </span> <a href="#">Register</a>
+            </div>
         </div>
 
         <div class="content">

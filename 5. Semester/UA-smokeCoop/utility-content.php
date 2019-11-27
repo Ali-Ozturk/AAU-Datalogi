@@ -8,13 +8,12 @@ $map_name = $map_result['name'];
 
 <div id="utility-content">
 
-    <div class="wrapper">
-        <div id="header">
+    <div class="wrapper" style="width: 100%">
+        <div id="header" style="height: 100px; text-align: center">
             <h1><?php print_r($map_name); ?></h1>
         </div>
 
         <div id="content">
-
             <!-- Fetch and load all utilities -->
             <?php include('print-utilities.php'); ?>
 
