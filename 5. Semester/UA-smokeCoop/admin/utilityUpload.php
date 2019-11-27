@@ -7,6 +7,8 @@ $smoke_type = $_POST['uti-type'];
 $smoke_map = $_POST['uti-map'];
 $smoke_exec = $_POST['uti-exec'];
 $smoke_creator = $_POST['uti-creator'];
+$smoke_comment = $_POST['uti-comment'];
+$smoke_setpos = $_POST['uti-setpos'];
 
 $currentDir = dirname(getcwd(), 1);
 $uploadDirectory = "/media/";
@@ -32,7 +34,7 @@ if (isset($_POST['submit'])) {
         $didUpload = move_uploaded_file($fileTmpName, $uploadPath);
 
         if ($didUpload) {
-            $addUtility = "INSERT INTO `utilities`(`title`, `type`, `map_id`, `execution`, `source`, `created_by`) VALUES ('" . $smoke_title . "','" . $smoke_type . "', $smoke_map ,'" . $smoke_exec . "','" . basename($fileName) . "',$smoke_creator)";
+            $addUtility = "INSERT INTO `utilities`(`title`, `type`, `map_id`, `execution`, `source`, `created_by`, `comment`, `setpos`) VALUES ('" . $smoke_title . "', '" . $smoke_type . "',  $smoke_map , '" . $smoke_exec . "', '" . basename($fileName) . "', $smoke_creator, '" . $smoke_comment . "', '" . $smoke_setpos . "')";
             mysqli_query($db, $addUtility);
             echo "The file " . basename($fileName) . " has been uploaded";
         } else {

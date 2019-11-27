@@ -19,6 +19,7 @@
 
     Map:
     <select name="uti-map" id="map">
+        <option value="2">de_overpass</option>
         <option value="1">de_inferno</option>
     </select>
 
@@ -34,6 +35,12 @@
     <select name="uti-creator" id="creator">
         <option value="1">Ali 'rec0il' Øztürk</option>
     </select>
+
+    Comment:
+    <input type="text" name="uti-comment" id="comment">
+
+    Setpos:
+    <input type="text" name="uti-setpos" id="setpos">
 
     Upload the media:
     <input type="file" name="myfile" id="fileToUpload">
